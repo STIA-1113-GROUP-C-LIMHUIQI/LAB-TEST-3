@@ -26,6 +26,7 @@ public class Question1 {
 		for (int x=0; x<num; x++)
 			wordArray[x] = scan.next();
 		
+		System.out.println("");
 		System.out.println("Word count: ");
 		
 		int repeat=1;
