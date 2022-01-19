@@ -1,0 +1,51 @@
+package labTest3;
+
+import java.util.Scanner;
+
+public class Question1 {
+
+	private static Scanner scan;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		countWords();
+	}
+	
+	
+	public static void countWords()
+	{
+		int num;
+		String word;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter the number of words: ");
+		num = scan.nextInt();
+		
+		String wordArray [] = new String[num];
+		System.out.println("Enter the words: ");
+		for (int x=0; x<num; x++)
+			wordArray[x] = scan.next();
+		
+		System.out.println("Word count: ");
+		
+		int repeat=1;
+	      
+	      for(int x=0;x<wordArray.length;x++)
+	      {
+	         for(int y=x+1;y<wordArray.length;y++)
+	         {
+	            
+	         if(wordArray[x].equals(wordArray[y]))
+	            {
+	               repeat=repeat+1;
+	               wordArray[y]="0";
+	            }
+	         }
+	         if(wordArray[x]!="0")
+	         System.out.println(wordArray[x]+", "+repeat);
+	         repeat=1;
+	         
+		}
+	}
+
+}
